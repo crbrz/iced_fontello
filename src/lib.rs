@@ -208,8 +208,7 @@ pub fn build(path: impl AsRef<Path>) -> Result<(), Error> {
 
         let mut hasher = sha2::Sha256::new();
         hasher.update(serde_json::to_string(&config).expect("Serialize config as JSON"));
-
-        format!("{:x}", hasher.finalize())
+        base16ct::lower::encode_string(&hasher.finalize())
     };
 
     let module_target = PathBuf::new()

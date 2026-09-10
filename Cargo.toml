@@ -10,12 +10,13 @@ keywords = ["gui", "ui", "graphics", "interface", "widgets"]
 rust-version = "1.92"
 
 [dependencies]
-reqwest = { version = "0.13", features = ["blocking", "json", "multipart"] }
-sha2 = "0.10"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
-toml = "0.9"
-zip = "8"
+reqwest = { version = "0.13.5", features = ["blocking", "json", "multipart"] }
+sha2 = "0.11"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+toml = "1.1.6+spec-1.1.0"
+zip = "8.6.0"
+base16ct = { version = "1.0.0", features = ["alloc"] }
 
 [workspace]
 members = ["example"]
